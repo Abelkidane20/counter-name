@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Counter App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#007bff">
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simple Counter</h1>
+    <p id="counter">0</p>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log("Service Worker Registered"));
+  }
+</script>
+
+</body>
+</html>
